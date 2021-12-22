@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const todosSlice = createSlice({
+const todoListSlice = createSlice({
   name: 'todoList',
   initialState: [],
   reducers: {
@@ -10,4 +10,4 @@ const todosSlice = createSlice({
   }
 })
 
-export default todosSlice
+export default todoListSlice
