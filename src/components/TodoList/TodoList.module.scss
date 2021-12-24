@@ -1,6 +1,40 @@
 .main {
+
+  & .todoList {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    height: 280px;
+    overflow-y: scroll;
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: white;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #1890ff;
+      border-radius: 4px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #7dc0ff;
+      cursor: pointer;
+    }
+  }
+
   & .form {
     display: flex;
+    margin-top: 12px;
 
     & .textInput {
       flex: 5;

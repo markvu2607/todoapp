@@ -1,6 +1,8 @@
 .main {
   font-weight: 300;
 
+  padding-bottom: 12px;
+
   & .filterBlock {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -54,10 +56,17 @@
         cursor: pointer;
       }
 
+      & .label {
+        cursor: pointer;
+        font-size: 14px;
+      }
+
       & .inputPriorities {
         width: 100%;
-        padding: 8px;
+        padding: 4px 8px;
         border: 1px solid #ccc;
+        font-size: 14px;
+        color: #333;
         transition: 0.3s;
         outline: none;
 

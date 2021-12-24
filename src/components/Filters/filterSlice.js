@@ -2,7 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const filtersSlice = createSlice({
   name: 'filters',
-  initialState: {},
+  initialState: {
+    searchText: '',
+    status: 'All',
+    priority: ''
+  },
   reducers: {
     addTodo: (state, action) => {
       return state

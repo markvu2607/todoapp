@@ -1,15 +1,18 @@
 import Todo from "../Todo/Todo"
 import styles from './TodoList.module.scss'
+import { useSelector } from "react-redux"
+import { todoListSelector } from "../../redux/selectors"
 
 const TodoList = () => {
+
+  const todoList = useSelector(todoListSelector)
+
   return (
     <div className={styles.main}>
       <div className={styles.todoList}>
-        <Todo></Todo>
-        <Todo></Todo>
-        <Todo></Todo>
-        <Todo></Todo>
-        <Todo></Todo>
+        {todoList.map((todo, index) => (
+          <Todo key={index} name={todo.name} priority={todo.priority} isCompleted={todo.isCompleted}></Todo>
+        ))}
       </div>
       <div className={styles.form}>
         <input className={styles.textInput} type="text" />

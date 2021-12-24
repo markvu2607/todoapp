@@ -1,0 +1,51 @@
+.main {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 4px 4px;
+
+  font-size: 18px;
+
+  & .checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  & .content {
+    flex: 1;
+  }
+
+  & .priority {}
+
+  & .iconTrash {
+    color: rgb(70, 70, 70);
+    transition: opacity 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+
+.lineThrough {
+  position: relative;
+
+  & .checkbox,
+  & .content,
+  & .priority {
+    opacity: 0.5;
+  }
+
+  &::before {
+    content: '';
+    width: 94%;
+    height: 1px;
+
+    background-color: black;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+}
