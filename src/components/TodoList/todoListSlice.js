@@ -2,18 +2,19 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const todoListSlice = createSlice({
   name: 'todoList',
-  initialState: [
-    { name: 'Hoc Redux', priority: 'High', isCompleted: true },
-    { name: 'Thuc hanh ReactJS', priority: 'Medium', isCompleted: false },
-    { name: 'Tap the duc 2', priority: 'Low', isCompleted: true },
-    { name: 'Test', priority: 'High', isCompleted: true },
-    { name: 'Test 2', priority: 'Low', isCompleted: false },
-  ],
+  initialState: [],
   reducers: {
     addTodo: (state, action) => {
-      return state
-    }
-  }
+      state.push(action.payload)
+    },
+    deleteTodo: (state, action) => {
+      state.splice(state.findIndex(todo => todo.id === action.payload), 1)
+    },
+    toggleCompleteTodo: (state, action) => {
+      const id = state.findIndex(todo => todo.id === action.payload)
+      state[id].isCompleted = !state[id].isCompleted
+    },
+  },
 })
 
 export default todoListSlice
