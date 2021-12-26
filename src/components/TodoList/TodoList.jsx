@@ -1,8 +1,8 @@
 import Todo from "../Todo/Todo"
 import styles from './TodoList.module.scss'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useSelector, useDispatch } from "react-redux"
-import { todoListSelector } from "../../redux/selectors"
+import { todoListRemainingSelector } from "../../redux/selectors"
 import todoListSlice from "./todoListSlice"
 import { v4 as uuidv4 } from 'uuid'
 
@@ -12,7 +12,7 @@ const TodoList = () => {
   const [todoName, setTodoName] = useState('')
   const [priority, setPriority] = useState('Medium')
 
-  const todoList = useSelector(todoListSelector)
+  const todoListRemaining = useSelector(todoListRemainingSelector)
 
   const handleAddTodo = () => {
     dispatch(todoListSlice.actions.addTodo({
@@ -44,7 +44,7 @@ const TodoList = () => {
   return (
     <div className={styles.main}>
       <div className={styles.todoList}>
-        {todoList.map(todoItem => (
+        {todoListRemaining.map(todoItem => (
           <Todo
             key={todoItem.id}
             data={todoItem}

@@ -8,8 +8,14 @@ const filtersSlice = createSlice({
     priority: ''
   },
   reducers: {
-    addTodo: (state, action) => {
-      return state
+    changeSearchText: (state, action) => {
+      state.searchText = action.payload
+    },
+    changeStatus: (state, action) => {
+      state.status = action.payload
+    },
+    changePriority: (state, action) => {
+      state.priority = action.payload
     }
   }
 })

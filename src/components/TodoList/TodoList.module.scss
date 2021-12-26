@@ -6,7 +6,7 @@
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 
-    height: 280px;
+    height: 250px;
     overflow-y: scroll;
 
     /* width */
@@ -37,18 +37,12 @@
     margin-top: 12px;
 
     & .textInput {
-      flex: 5;
-
+      flex: 8;
       border: 1px solid #ddd;
-
-      height: 32px;
-
+      height: 40px;
       font-size: 16px;
-
       padding: 4px 8px;
-
       outline: none;
-
       transition: 0.3s;
 
       &:hover,
@@ -59,11 +53,10 @@
     }
 
     & .priority {
-      flex: 2;
-
+      flex: 3;
       border: 1px solid #ddd;
-
       padding: 4px 8px;
+      font-size: 16px;
       outline: none;
 
       transition: 0.3s;
@@ -77,13 +70,11 @@
     }
 
     & .btnSubmit {
-      flex: 1;
-
+      flex: 2;
       border: none;
-
       color: white;
       background-color: #1890ff;
-
+      font-size: 16px;
       transition: 0.3s;
 
       &:hover {
@@ -92,6 +83,4 @@
       }
     }
   }
-
-  & .todoList {}
 }
